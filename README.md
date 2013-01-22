@@ -4,5 +4,6 @@ xmlList = '<?xml version="1.0" encoding="UTF-8"?><events generator="localhost:30
 errorPtr = Pointer.new(:object)
 xml = TBXML.alloc.initWithXMLString(xmlList, error:errorPtr)
 puts errorPtr[0] # returns nil
-evts = xml.rootXMLElement # failed
+# failed : Can't find pointer description for type `{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}'
+evts = xml.rootXMLElement
 ```
