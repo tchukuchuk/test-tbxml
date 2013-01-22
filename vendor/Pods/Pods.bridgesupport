@@ -1,0 +1,306 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct type='{_TBXMLAttribute=&quot;name&quot;*&quot;value&quot;*&quot;next&quot;^{_TBXMLAttribute}}' name='TBXMLAttribute'>
+<field declared_type='char*' type='*' name='name'/>
+<field declared_type='char*' type='*' name='value'/>
+<field declared_type='struct _TBXMLAttribute*' type='^{_TBXMLAttribute=**^{_TBXMLAttribute}}' name='next'/>
+</struct>
+<struct type='{_TBXMLAttributeBuffer=&quot;attributes&quot;^{_TBXMLAttribute}&quot;next&quot;^{_TBXMLAttributeBuffer}&quot;previous&quot;^{_TBXMLAttributeBuffer}}' name='TBXMLAttributeBuffer'>
+<field declared_type='TBXMLAttribute*' type='^{_TBXMLAttribute=**^{_TBXMLAttribute}}' name='attributes'/>
+<field declared_type='struct _TBXMLAttributeBuffer*' type='^{_TBXMLAttributeBuffer=^{_TBXMLAttribute}^{_TBXMLAttributeBuffer}^{_TBXMLAttributeBuffer}}' name='next'/>
+<field declared_type='struct _TBXMLAttributeBuffer*' type='^{_TBXMLAttributeBuffer=^{_TBXMLAttribute}^{_TBXMLAttributeBuffer}^{_TBXMLAttributeBuffer}}' name='previous'/>
+</struct>
+<struct type='{_TBXMLElement=&quot;name&quot;*&quot;text&quot;*&quot;firstAttribute&quot;^{_TBXMLAttribute}&quot;parentElement&quot;^{_TBXMLElement}&quot;firstChild&quot;^{_TBXMLElement}&quot;currentChild&quot;^{_TBXMLElement}&quot;nextSibling&quot;^{_TBXMLElement}&quot;previousSibling&quot;^{_TBXMLElement}}' name='TBXMLElement'>
+<field declared_type='char*' type='*' name='name'/>
+<field declared_type='char*' type='*' name='text'/>
+<field declared_type='TBXMLAttribute*' type='^{_TBXMLAttribute=**^{_TBXMLAttribute}}' name='firstAttribute'/>
+<field declared_type='struct _TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='parentElement'/>
+<field declared_type='struct _TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='firstChild'/>
+<field declared_type='struct _TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='currentChild'/>
+<field declared_type='struct _TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='nextSibling'/>
+<field declared_type='struct _TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='previousSibling'/>
+</struct>
+<struct type='{_TBXMLElementBuffer=&quot;elements&quot;^{_TBXMLElement}&quot;next&quot;^{_TBXMLElementBuffer}&quot;previous&quot;^{_TBXMLElementBuffer}}' name='TBXMLElementBuffer'>
+<field declared_type='TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='elements'/>
+<field declared_type='struct _TBXMLElementBuffer*' type='^{_TBXMLElementBuffer=^{_TBXMLElement}^{_TBXMLElementBuffer}^{_TBXMLElementBuffer}}' name='next'/>
+<field declared_type='struct _TBXMLElementBuffer*' type='^{_TBXMLElementBuffer=^{_TBXMLElement}^{_TBXMLElementBuffer}^{_TBXMLElementBuffer}}' name='previous'/>
+</struct>
+<string_constant value='com.71squared.tbxml' nsstring='true' name='D_TBXML_DOMAIN'/>
+<enum value='8' name='D_TBXML_ATTRIBUTE_IS_NIL'/>
+<enum value='9' name='D_TBXML_ATTRIBUTE_NAME_IS_NIL'/>
+<enum value='10' name='D_TBXML_ATTRIBUTE_NOT_FOUND'/>
+<enum value='0' name='D_TBXML_DATA_NIL'/>
+<enum value='1' name='D_TBXML_DECODE_FAILURE'/>
+<enum value='4' name='D_TBXML_ELEMENT_IS_NIL'/>
+<enum value='5' name='D_TBXML_ELEMENT_NAME_IS_NIL'/>
+<enum value='6' name='D_TBXML_ELEMENT_NOT_FOUND'/>
+<enum value='7' name='D_TBXML_ELEMENT_TEXT_IS_NIL'/>
+<enum value='3' name='D_TBXML_FILE_NOT_FOUND_IN_BUNDLE'/>
+<enum value='2' name='D_TBXML_MEMORY_ALLOC_FAILURE'/>
+<enum value='11' name='D_TBXML_PARAM_NAME_IS_NIL'/>
+<enum value='100' name='MAX_ATTRIBUTES'/>
+<enum value='100' name='MAX_ELEMENTS'/>
+<enum value='4' name='TBXML_ATTRIBUTE_CDATA_END'/>
+<enum value='1' name='TBXML_ATTRIBUTE_NAME_END'/>
+<enum value='0' name='TBXML_ATTRIBUTE_NAME_START'/>
+<enum value='3' name='TBXML_ATTRIBUTE_VALUE_END'/>
+<enum value='2' name='TBXML_ATTRIBUTE_VALUE_START'/>
+<class name='NSData'>
+<method selector='base64Encoding'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='base64EncodingWithLineLength:'>
+<arg declared_type='unsigned int' index='0' type='I' name='lineLength'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='dataWithBase64EncodedString:'>
+<arg declared_type='NSString*' index='0' type='@' name='string'/>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method class_method='true' selector='dataWithUncompressedContentsOfFile:'>
+<arg declared_type='NSString*' index='0' type='@' name='aFile'/>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='gzipDeflate'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='gzipInflate'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='initWithBase64EncodedString:'>
+<arg declared_type='NSString*' index='0' type='@' name='string'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='NSMutableURLRequest'>
+<method class_method='true' selector='tbxmlGetRequestWithURL:'>
+<arg declared_type='NSURL*' index='0' type='@' name='url'/>
+<retval declared_type='NSMutableURLRequest*' type='@'/>
+</method>
+<method class_method='true' selector='tbxmlPostRequestWithURL:parameters:'>
+<arg declared_type='NSURL*' index='0' type='@' name='url'/>
+<arg declared_type='NSDictionary*' index='1' type='@' name='parameters'/>
+<retval declared_type='NSMutableURLRequest*' type='@'/>
+</method>
+</class>
+<class name='NSURLConnection'>
+<method class_method='true' selector='tbxmlAsyncRequest:success:failure:'>
+<arg declared_type='NSURLRequest*' index='0' type='@' name='request'/>
+<arg declared_type='TBXMLAsyncRequestSuccessBlock' index='1' function_pointer='true' type='@?' name='successBlock'>
+<arg declared_type='NSData*' type='@'/>
+<arg declared_type='NSURLResponse*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='TBXMLAsyncRequestFailureBlock' index='2' function_pointer='true' type='@?' name='failureBlock'>
+<arg declared_type='NSData*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='TBXML'>
+<method class_method='true' selector='attributeName:'>
+<arg declared_type='TBXMLAttribute*' index='0' type='^{_TBXMLAttribute=**^{_TBXMLAttribute}}' name='aXMLAttribute'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='attributeName:error:'>
+<arg declared_type='TBXMLAttribute*' index='0' type='^{_TBXMLAttribute=**^{_TBXMLAttribute}}' name='aXMLAttribute'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='attributeValue:'>
+<arg declared_type='TBXMLAttribute*' index='0' type='^{_TBXMLAttribute=**^{_TBXMLAttribute}}' name='aXMLAttribute'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='attributeValue:error:'>
+<arg declared_type='TBXMLAttribute*' index='0' type='^{_TBXMLAttribute=**^{_TBXMLAttribute}}' name='aXMLAttribute'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='childElementNamed:parentElement:'>
+<arg declared_type='NSString*' index='0' type='@' name='aName'/>
+<arg declared_type='TBXMLElement*' index='1' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aParentXMLElement'/>
+<retval declared_type='TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}'/>
+</method>
+<method class_method='true' selector='childElementNamed:parentElement:error:'>
+<arg declared_type='NSString*' index='0' type='@' name='aName'/>
+<arg declared_type='TBXMLElement*' index='1' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aParentXMLElement'/>
+<arg declared_type='NSError**' index='2' type='^@' name='error'/>
+<retval declared_type='TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}'/>
+</method>
+<method selector='decodeData:'>
+<arg declared_type='NSData*' index='0' type='@' name='data'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='decodeData:withError:'>
+<arg declared_type='NSData*' index='0' type='@' name='data'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='elementName:'>
+<arg declared_type='TBXMLElement*' index='0' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aXMLElement'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='elementName:error:'>
+<arg declared_type='TBXMLElement*' index='0' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aXMLElement'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithURL:success:failure:'>
+<arg declared_type='NSURL*' index='0' type='@' name='aURL'/>
+<arg declared_type='TBXMLSuccessBlock' index='1' function_pointer='true' type='@?' name='successBlock'>
+<arg declared_type='TBXML*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='TBXMLFailureBlock' index='2' function_pointer='true' type='@?' name='failureBlock'>
+<arg declared_type='TBXML*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithXMLData:'>
+<arg declared_type='NSData*' index='0' type='@' name='aData'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithXMLData:error:'>
+<arg declared_type='NSData*' index='0' type='@' name='aData'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithXMLFile:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLFile'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithXMLFile:error:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLFile'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithXMLFile:fileExtension:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLFile'/>
+<arg declared_type='NSString*' index='1' type='@' name='aFileExtension'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithXMLFile:fileExtension:error:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLFile'/>
+<arg declared_type='NSString*' index='1' type='@' name='aFileExtension'/>
+<arg declared_type='NSError**' index='2' type='^@' name='error'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithXMLString:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLString'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithXMLString:error:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLString'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='iterateAttributesOfElement:withBlock:'>
+<arg declared_type='TBXMLElement*' index='0' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='anElement'/>
+<arg declared_type='TBXMLIterateAttributeBlock' index='1' function_pointer='true' type='@?' name='iterateBlock'>
+<arg declared_type='TBXMLAttribute*' type='^{_TBXMLAttribute=**^{_TBXMLAttribute}}'/>
+<arg declared_type='NSString*' type='@'/>
+<arg declared_type='NSString*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='iterateElementsForQuery:fromElement:withBlock:'>
+<arg declared_type='NSString*' index='0' type='@' name='query'/>
+<arg declared_type='TBXMLElement*' index='1' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='anElement'/>
+<arg declared_type='TBXMLIterateBlock' index='2' function_pointer='true' type='@?' name='iterateBlock'>
+<arg declared_type='TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='nextSiblingNamed:searchFromElement:'>
+<arg declared_type='NSString*' index='0' type='@' name='aName'/>
+<arg declared_type='TBXMLElement*' index='1' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aXMLElement'/>
+<retval declared_type='TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}'/>
+</method>
+<method class_method='true' selector='nextSiblingNamed:searchFromElement:error:'>
+<arg declared_type='NSString*' index='0' type='@' name='aName'/>
+<arg declared_type='TBXMLElement*' index='1' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aXMLElement'/>
+<arg declared_type='NSError**' index='2' type='^@' name='error'/>
+<retval declared_type='TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}'/>
+</method>
+<method selector='rootXMLElement'>
+<retval declared_type='TBXMLElement*' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}'/>
+</method>
+<method class_method='true' selector='tbxmlWithURL:success:failure:'>
+<arg declared_type='NSURL*' index='0' type='@' name='aURL'/>
+<arg declared_type='TBXMLSuccessBlock' index='1' function_pointer='true' type='@?' name='successBlock'>
+<arg declared_type='TBXML*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='TBXMLFailureBlock' index='2' function_pointer='true' type='@?' name='failureBlock'>
+<arg declared_type='TBXML*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='tbxmlWithXMLData:'>
+<arg declared_type='NSData*' index='0' type='@' name='aData'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='tbxmlWithXMLData:error:'>
+<arg declared_type='NSData*' index='0' type='@' name='aData'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='tbxmlWithXMLFile:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLFile'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='tbxmlWithXMLFile:error:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLFile'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='tbxmlWithXMLFile:fileExtension:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLFile'/>
+<arg declared_type='NSString*' index='1' type='@' name='aFileExtension'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='tbxmlWithXMLFile:fileExtension:error:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLFile'/>
+<arg declared_type='NSString*' index='1' type='@' name='aFileExtension'/>
+<arg declared_type='NSError**' index='2' type='^@' name='error'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='tbxmlWithXMLString:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLString'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='tbxmlWithXMLString:error:'>
+<arg declared_type='NSString*' index='0' type='@' name='aXMLString'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='textForElement:'>
+<arg declared_type='TBXMLElement*' index='0' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aXMLElement'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='textForElement:error:'>
+<arg declared_type='TBXMLElement*' index='0' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aXMLElement'/>
+<arg declared_type='NSError**' index='1' type='^@' name='error'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='valueOfAttributeNamed:forElement:'>
+<arg declared_type='NSString*' index='0' type='@' name='aName'/>
+<arg declared_type='TBXMLElement*' index='1' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aXMLElement'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='valueOfAttributeNamed:forElement:error:'>
+<arg declared_type='NSString*' index='0' type='@' name='aName'/>
+<arg declared_type='TBXMLElement*' index='1' type='^{_TBXMLElement=**^{_TBXMLAttribute}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}^{_TBXMLElement}}' name='aXMLElement'/>
+<arg declared_type='NSError**' index='2' type='^@' name='error'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+</signatures>
